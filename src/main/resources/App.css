@@ -1,0 +1,31 @@
+.root{
+    -fx-background-color: black;
+
+}
+
+.label
+{
+        -fx-text-fill: white;
+
+}
+
+.label:hover
+{
+        -fx-text-fill: red;
+}
+
+#horror
+{
+    -fx-text-fill: black;
+
+}
+
+
+#horror1
+{
+    -fx-text-fill:red;
+
+}
+
+
+
