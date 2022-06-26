@@ -45,16 +45,18 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) {
 
+        //calling the methods
         createLogo();
         createMenu();
         createScrollPanes();
         createGenre();
-        scene.getStylesheets().add("/App.css");
+        scene.getStylesheets().add("/App.css"); //adding css to the scene
         stage.setTitle("Group Netflix");
         stage.setScene(scene);
         stage.show();
     }
 
+    //creating method that manages the scrollpane and the flowpane
     public void createScrollPanes()
     {
         scrollPane.setContent(flowPane);
@@ -76,6 +78,7 @@ public class HelloApplication extends Application {
         root.getChildren().add(sideMenu);
     }
 
+    //menu method
     public void createMenu()
     {
         Label label = new Label("Home");
@@ -89,9 +92,9 @@ public class HelloApplication extends Application {
         root.getChildren().add(menu);
     }
 
+    //creating the genres and their imageViews
     public void createGenre()
     {
-
 
 
         //setting the padding for the vBox
@@ -105,6 +108,7 @@ public class HelloApplication extends Application {
         imageView.setFitHeight(144);
         imageView.setStyle("-fx-background-color: transparent;");
 
+        //onclick methods to redirect the user to the webengine
         imageView.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
@@ -115,6 +119,8 @@ public class HelloApplication extends Application {
                 stage.show();
             }
         });
+
+        //create a hover like effect to the imageViews and the labels and then the code is the same throughout
         imageView.setOnMouseEntered(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
@@ -346,6 +352,7 @@ public class HelloApplication extends Application {
             }
         });
 
+        //adding the elements to the hBox for a horizontal view
         hBox.getChildren().addAll(imageView,imageView1,imageView2,imageView3,imageView4,imageView5,imageView6,imageView7);
 
 
@@ -1155,7 +1162,7 @@ public class HelloApplication extends Application {
         });
 
 
-
+//setting the paddings and getting the children for the vboxes and the hboxes
         title1.setSpacing(230);
         title1.getChildren().addAll(t1,t2,t3,t4,t5,t6,t7,t8);
         title2.setSpacing(230);
